@@ -10,6 +10,13 @@ A comprehensive reference library covering every major aspect of working with Or
 - Use Oracle Database 19c as the baseline compatibility target unless stated otherwise.
 - Explicitly call out features that require newer releases and provide 19c-compatible alternatives where practical.
 
+## GitHub Ruleset
+
+- Default-branch ruleset definition is stored in `.github/rulesets/main.json`.
+- Apply it with:
+  - `export GITHUB_TOKEN=<token-with-repo-admin-permission>`
+  - `./scripts/apply-github-ruleset.sh krisrice oracle-db-skills`
+
 ---
 
 ## Categories
