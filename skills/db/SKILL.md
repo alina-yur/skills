@@ -12,7 +12,6 @@ This domain contains Oracle Database skills for administration, SQL and PL/SQL d
 ```text
 skills/db/
 ├── admin/
-├── ai/
 ├── agent/
 ├── appdev/
 ├── architecture/
@@ -36,7 +35,6 @@ skills/db/
 | Topic | Directory |
 |-------|-----------|
 | Backup, recovery, RMAN, Data Guard, redo/undo logs, users | `skills/db/admin/` |
-| Select AI, AI Vector Search, embeddings, vector indexes, RAG, AI profiles, AI security | `skills/db/ai/` |
 | Safe DML, destructive operation guards, idempotency, schema discovery, ORA- error handling | `skills/db/agent/` |
 | JDBC, pooling, JSON, XML, spatial, Oracle Text, transactions, MLE, language drivers | `skills/db/appdev/` |
 | RAC, Multitenant, Exadata, In-Memory, OCI database services, Data Guard architecture | `skills/db/architecture/` |
@@ -57,8 +55,6 @@ skills/db/
 ## Key Starting Points
 
 - `skills/db/sqlcl/sqlcl-mcp-server.md`
-- `skills/db/ai/select-ai.md`
-- `skills/db/ai/ai-vector-search.md`
 - `skills/db/migrations/migration-assessment.md`
 - `skills/db/performance/explain-plan.md`
 - `skills/db/plsql/plsql-package-design.md`
@@ -72,5 +68,5 @@ skills/db/
 |------|----------------------|
 | Diagnose a slow query | `explain-plan` → `wait-events` → `optimizer-stats` → `awr-reports` |
 | Plan a migration | `migration-assessment` → `oracle-migration-tools` → source-specific `migrate-*.md` → `migration-cutover-strategy` |
-| Build RAG on Oracle Database | `ai/select-ai.md` → `select-ai-rag` → `vector-embeddings` → `vector-indexes` |
+| Build RAG on Oracle Database | `ai-profiles` → `vector-search` → `dbms-vector` |
 | Perform agent-safe schema change | `schema-discovery` → `destructive-op-guards` → `idempotency-patterns` → `schema-migrations` |
