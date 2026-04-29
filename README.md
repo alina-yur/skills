@@ -4,7 +4,7 @@ Oracle Skills is the repository for Oracle-wide skills, organized by domain at t
 
 The goal is to provide a single source of truth for practical Oracle skills across products and platforms. Each domain can own its own routing, indexing, and topic structure while still fitting a consistent repository model.
 
-The current deepest content lives in `db/`, with `oci/`, `fusion/`, `apex/`, and `graal/` in place as domain roots for expansion.
+The current deepest content lives in `db/`, with `graal/` now containing GraalVM Native Image guidance and `oci/`, `fusion/`, and `apex/` in place as domain roots for expansion.
 
 ## Installation
 
@@ -49,7 +49,12 @@ npx skills add oracle/skills/db
 ├── apex/
 │   └── SKILL.md
 ├── graal/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── native-image/
+│       ├── build-native-image.md
+│       ├── native-build-tools.md
+│       ├── reachability-metadata.md
+│       └── troubleshooting.md
 └── oci/
     └── SKILL.md
 ```
@@ -57,6 +62,7 @@ npx skills add oracle/skills/db
 ## Start Here
 
 - `db/SKILL.md` — database domain routing and key entry points
+- `graal/SKILL.md` — GraalVM Native Image routing and key entry points
 - `SKILL_AUTHORING_GUIDE.md` — best practices for creating or updating skills in this repo
 
 ## Domain Model
@@ -65,7 +71,7 @@ npx skills add oracle/skills/db
 - `oci/` is the root for future Oracle Cloud Infrastructure skills.
 - `fusion/` is the root for future Oracle Fusion skills.
 - `apex/` is the root for future Oracle APEX skills.
-- `graal/` is the root for future Graal and GraalVM-related Oracle skills.
+- `graal/` contains Graal and GraalVM-related Oracle skills, starting with GraalVM Native Image.
 
 Each domain should own its own `SKILL.md` and any additional indexing files it needs.
 
