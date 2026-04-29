@@ -1,10 +1,8 @@
 # Oracle Skills
 
-Oracle Skills is the repository for Oracle-wide skills, organized by domain at the repository root.
+Oracle Skills is a collection of practical, installable skills for working with Oracle technologies.
 
-The goal is to provide a single source of truth for practical Oracle skills across products and platforms. Each domain can own its own routing, indexing, and topic structure while still fitting a consistent repository model.
-
-The current deepest content lives in `db/`, with `graal/` now containing GraalVM Native Image guidance and `oci/`, `fusion/`, and `apex/` in place as domain roots for expansion.
+The goal is to give developers and agents a single place to find source-backed Oracle guidance across Oracle Database, Oracle Cloud Infrastructure, GraalVM, Oracle Fusion, Oracle APEX, and future domains.
 
 ## Installation
 
@@ -12,14 +10,30 @@ Install a domain by appending the root-level domain directory to the repository 
 
 ```bash
 npx skills add oracle/skills/db
+npx skills add oracle/skills/graal
+...
 ```
 
 ## Repository Goals
 
 - Provide Oracle-wide skills in one repository.
-- Organize content by domain instead of mixing unrelated Oracle topics together.
+- Define domain entry points that help developers and agents route to the right topic quickly.
 - Keep each skill practical, source-backed, and easy to consume on demand.
 - Allow each domain to evolve its own taxonomy without breaking repo-wide consistency.
+
+## Domains
+
+- `db/` is the active Oracle Database domain and includes database, ORDS, SQLcl, framework, container, and agent workflow skills.
+- `oci/` is the root for future Oracle Cloud Infrastructure skills.
+- `fusion/` is the root for future Oracle Fusion skills.
+- `apex/` is the root for future Oracle APEX skills.
+- `graal/` contains GraalVM skills, starting with Native Image.
+
+## Start Here
+
+1. Pick the domain closest to your task.
+2. Install that domain skill.
+3. Add other domain skills only when needed.
 
 ## Repository Layout
 
@@ -59,23 +73,9 @@ npx skills add oracle/skills/db
     └── SKILL.md
 ```
 
-## Start Here
+Each domain has its own `SKILL.md` and any supporting index files it needs.
 
-- `db/SKILL.md` — database domain routing and key entry points
-- `graal/SKILL.md` — GraalVM Native Image routing and key entry points
-- `SKILL_AUTHORING_GUIDE.md` — best practices for creating or updating skills in this repo
-
-## Domain Model
-
-- `db/` is the active Oracle Database domain and includes database, ORDS, SQLcl, framework, container, and agent workflow skills.
-- `oci/` is the root for future Oracle Cloud Infrastructure skills.
-- `fusion/` is the root for future Oracle Fusion skills.
-- `apex/` is the root for future Oracle APEX skills.
-- `graal/` contains Graal and GraalVM-related Oracle skills, starting with GraalVM Native Image.
-
-Each domain should own its own `SKILL.md` and any additional indexing files it needs.
-
-For a real domain, organize content by category directories under that domain path, and use the domain `SKILL.md` as the table of contents for the domain. That file should normally include:
+For a real domain, organize content by category directories and use `SKILL.md` as the table of contents. A domain `SKILL.md` should normally include:
 
 - `## How to Use This Domain`
 - `## Directory Structure`
@@ -83,7 +83,7 @@ For a real domain, organize content by category directories under that domain pa
 - `## Key Starting Points`
 - `## Common Multi-Step Flows`
 
-For domains that are still stubs, keep `SKILL.md` minimal. Those files should act as short sample markers that point readers back to this `README.md` and `SKILL_AUTHORING_GUIDE.md` for the repo-wide pattern.
+For stub domains, keep `SKILL.md` minimal and point users back to this `README.md` and `SKILL_AUTHORING_GUIDE.md`.
 
 ## Version Coverage Standard
 
